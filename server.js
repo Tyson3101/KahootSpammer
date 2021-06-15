@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const kahootSpammer = require("kahoot-spammer");
+const http = require("http");
+const server = http.Server(app);
 
 const PORT = process.env.PORT || 5000;
 
@@ -28,4 +30,4 @@ function botSpam(req, res) {
     .catch((e) => res.json({ ...e, success: false }));
 }
 
-app.listen(PORT, () => console.log("http://localhost:" + PORT));
+server.listen(PORT, () => console.log("http://localhost:" + PORT));
