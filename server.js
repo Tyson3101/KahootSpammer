@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const kahootSpammer = require("kahoot-spammer");
 
+// Code
+
 app.use(express.static("./public"));
 app.set("view engine", "ejs");
 app.set("views", "./public/views");
